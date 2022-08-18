@@ -1,0 +1,61 @@
+{
+    "name": "dev-container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "18-bullseye"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true,
+                "editor.formatOnPaste": true,
+                "editor.formatOnType": true,
+                "editor.tabSize": 2,
+                "editor.codeActionsOnSave": {
+                    "source.fixAll.eslint": true,
+                    "source.organizeImports": true,
+                    "source.fixAll": true,
+                    "source.fixAll.stylelint": true
+                },
+                "files.autoSave": "onFocusChange"
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "formulahendry.auto-complete-tag",
+                "aessoft.aessoft-class-autocomplete",
+                "eamodio.gitlens",
+                "ecmel.vscode-html-css",
+                "wix.vscode-import-cost",
+                "amirmarmul.laravel-blade-vscode",
+                "austenc.laravel-blade-spacer",
+                "onecentlin.laravel-extension-pack",
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "codingyu.laravel-goto-view",
+                "naoray.laravel-goto-components",
+                "ionutvmi.path-autocomplete",
+                "xdebug.php-debug",
+                "xdebug.php-pack",
+                "bmewburn.vscode-intelephense-client",
+                "syler.sass-indented",
+                "sasa.vscode-sass-format",
+                "mrmlnc.vscode-scss",
+                "bradlc.vscode-tailwindcss",
+                "gruntfuggly.todo-tree",
+                "gruntfuggly.todo-tree",
+                "shardulm94.trailing-spaces",
+                "vue.volar",
+                "peakchen90.vue-beautify",
+                "shenjiaolong.vue-helper",
+                "github.vscode-pull-request-github",
+                "pkief.material-icon-theme"
+            ]
+        }
+    },
+    "remoteUser": "node"
+}
