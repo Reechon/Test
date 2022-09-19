@@ -6,7 +6,7 @@
     @include('nav')
   <div class="container">
     @foreach($articles as $article) 
-      <div class="card mt-3">
+      <!-- <div class="card mt-3">
         <div class="card-body d-flex flex-row">
           <i class="fas fa-user-circle fa-3x mr-1"></i>
           <div>
@@ -16,11 +16,11 @@
             <div class="font-weight-lighter">
               {{ $article->created_at->format('Y/m/d H:i') }} 
             </div>
-          </div>
+          </div> -->
 
-          @if( Auth::id() === $article->user_id )
+          <!-- @if( Auth::id() === $article->user_id ) -->
           <!-- dropdown -->
-          <div class="ml-auto card-text">
+          <!-- <div class="ml-auto card-text">
             <div class="dropdown">
               <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <button type="button" class="btn btn-link text-muted m-0 p-2">
@@ -37,11 +37,11 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- dropdown -->
   
           <!-- modal -->
-          <div id="modal-delete-{{ $article->id }}" class="modal fade" tabindex="-1" role="dialog">
+          <!-- <div id="modal-delete-{{ $article->id }}" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -62,11 +62,11 @@
                 </form>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- modal -->
-        @endif
+        <!-- @endif -->
 
-        </div>
+        <!-- </div>
         <div class="card-body pt-0 pb-2">
           <h3 class="h4 card-title">
             {{ $article->title }} 
@@ -75,7 +75,8 @@
             {!! nl2br(e( $article->body )) !!} 
           </div>
         </div>
-      </div>
+      </div> -->
+      @include('articles.card')
     @endforeach 
   </div>
 @endsection
